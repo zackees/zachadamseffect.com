@@ -20,7 +20,7 @@ import urllib.request
 REPO = "zackees/zachadamseffect.com"
 DOMAIN = "zachadamseffect.com"
 POLL_S = 45
-MAX_WAIT_S = 3 * 60 * 60  # 3 hours
+MAX_WAIT_S = 24 * 60 * 60  # 24 hours — GitHub's own guidance for first-time certs
 
 
 def gh_json(args: list[str]) -> dict:
