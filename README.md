@@ -23,7 +23,9 @@ python3 scripts/build_episodes.py            # regenerate after editing episodes
 python3 scripts/build_episodes.py --check    # validation: exit 1 if generated files are stale
 ```
 
-The carousel lives between `<!-- EPISODES:BEGIN -->` / `<!-- EPISODES:END -->` in `index.html`;
+The newest episode is the "Watch latest episode" card in the channel hero, between
+`<!-- HERO-LATEST:BEGIN -->` / `<!-- HERO-LATEST:END -->`; the "Previous episodes" carousel (the
+rest, newest first) lives between `<!-- EPISODES:BEGIN -->` / `<!-- EPISODES:END -->` in `index.html`;
 re-run `build_episodes.py` after `integrate_from_demo1.py` regenerates the page.
 
 ## Deploy
