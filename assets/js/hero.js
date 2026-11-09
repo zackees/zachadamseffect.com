@@ -55,9 +55,15 @@
     frame.addEventListener('load', () => {
       // A load event alone cannot prove a cross-origin player is usable.
       handshake = setInterval(() => frame.contentWindow?.postMessage(JSON.stringify({event:'listening', id:'hero'}), 'https://www.youtube-nocookie.com'), 250);
+      setTimeout(() => clearInterval(handshake), 30000);
     });
     frame.addEventListener('error', fallback);
     box.append(frame);
+  }
+  function play() {
+    load(true);
+    if (ready) command('playVideo');
+    clearTimeout(timer); timer = setTimeout(fallback, 8000);
   }
   addEventListener('message', event => {
     if (event.origin !== 'https://www.youtube-nocookie.com' || event.source !== frame?.contentWindow || failed) return;
@@ -73,11 +79,11 @@
     event.preventDefault(); requested = true;
     status.textContent = 'Loading video…';
     shim.querySelector('.zl-play span').textContent = 'Loading…';
-    load(true);
-    if (ready) command('playVideo');
-    clearTimeout(timer); timer = setTimeout(fallback, 8000);
+    // Preserve the gesture's intent without starting third-party traffic before load.
+    if (document.readyState === 'complete') play();
   });
   function preload() {
+    if (requested) {play(); return;}
     if (navigator.connection?.saveData) return;
     const start = () => {
       if (frame || failed) return;
@@ -86,8 +92,13 @@
     };
     if ('requestIdleCallback' in window) requestIdleCallback(start, {timeout:2000}); else setTimeout(start, 500);
   }
-  setTimeout(() => clearInterval(handshake), 30000);
   if (document.readyState === 'complete') preload(); else addEventListener('load', preload, {once:true});
+  // The booking bar must never compete with the episode's own controls on mobile.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      document.body.classList.toggle('hero-in-view', entries[0].isIntersecting);
+    }, {rootMargin:'0px 0px 90px 0px'}).observe(box.closest('.zl'));
+  }
   const toggle = document.querySelector('.disclosure'), snippet = document.querySelector('.snippet');
   const teaser = document.querySelector('.notes-teaser');
   toggle.hidden = false; teaser.hidden = false; snippet.classList.add('collapsed'); snippet.setAttribute('aria-hidden', 'true');
