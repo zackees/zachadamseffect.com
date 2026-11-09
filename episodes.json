@@ -1,0 +1,64 @@
+{
+ "episodes": [
+  {
+   "number": 171,
+   "date": "2026-11-03",
+   "title": "AI Job Wipeout, Evil AI",
+   "youtube_id": "ILF5shEX-fg",
+   "youtube_title": "DTV - Zach-Adams Effect with Zach Vorhies - Ep. 171 – Nov 03, 2026 - AI Job Wipeout, Evil AI",
+   "upload_date": "2026-11-07",
+   "duration_seconds": 3427,
+   "description": "- Todd's Vibe-Coding Challenge and DeepSeek 1017 (0:00)\n- Anthropic's IPO Filing and 10X Yearly Revenue (3:16)\n- Where the Money Comes From: Military Contracts and Big Tech Buyouts (7:34)\n- A $2 Trillion Valuation and the Recursive Self-Improving Loop (9:48)\n- The AI Job Wipeout and Structural Unemployment (14:24)\n- Zach's Midterm Prediction: Two Presidents and a System Reset (19:38)\n- Todd's Audit Raid Video Game for My575E.com (24:07)\n- Mike's Decentralize.TV Video Game (27:42)\n- The Anti-AI Backlash and the OBS Rust Project (31:48)\n- Zach's AI Consulting at ZachVorhies.com/AI (35:49)\n- Mike's GPU-Free AI Knowledge Engine (40:01)\n- Two Flipped Neurons Turn an AI Evil (44:54)\n- After Party: Going Off-Grid with Solar and Batteries (56:50)\n- Todd's One-Year Food Kit Arrives (1:07:08)\n- Protecting Assets with a California UNA (1:14:03)"
+  },
+  {
+   "number": 169,
+   "date": "2026-10-23",
+   "title": "The AI Security Apocalypse",
+   "youtube_id": "Dz5PLl3Etxw",
+   "youtube_title": "DTV - Zach-Adams Effect - Ep. 169 – Oct 23, 2026 - The AI Security Apocalypse",
+   "upload_date": "2026-10-23",
+   "duration_seconds": 7338,
+   "description": "The Cyber Pearl Harbor: AI-Discovered Zero-Days in PHP and NGINX\n- The \"Security Apocalypse\" and How to Protect Yourself Right Now\n- Why Rust Is Nearly Bulletproof Against These Exploits\n- Siemens PLC Vulnerabilities and AI-Built Stuxnet-Style Viruses\n- Who Benefits: False Flags, OpenAI and the Push to Ban Open-Source AI\n- Why Only Open-Source AI Like DeepSeek and GLM Can Fight Back\n- Todd Resurrects iloveatheist.org With AI Agents for Under $10\n- DeepSeek 4.1 Flash 1017, Million-Token Context and Running AI Locally\n- GPUs, Power Supplies and the Real Cost of Local AI Hardware\n- Waves of Cyber Attacks Coming Over the Next Six Months\n- After Party: Vibe Coding, AI Agents and Voice Avatars\n- The Una Video Game Challenge\n- One-Year Food Kits at Health Ranger Store"
+  },
+  {
+   "number": 168,
+   "date": "2026-10-17",
+   "title": "Banned by OBS, Zach Rebuilds It in Rust",
+   "youtube_id": "YpbLtEfmCK4",
+   "youtube_title": "DTV - Zach-Adams Effect - Episode 168 – Oct 17, 2026 - Banned by OBS, Zach Rebuilds It in Rust",
+   "upload_date": "2026-10-17",
+   "duration_seconds": 2561,
+   "description": "- Converting OBS to Rust (0:00)\n- The Rise of Software Cloning (6:18)\n- Personal AI Agent Workflows (12:22)\n- Efficient Local Model Execution (16:42)\n- The Future of AI Compute Economics (21:34)\n- Supporting Open Source Development (32:33)"
+  },
+  {
+   "number": 164,
+   "date": "2026-10-09",
+   "title": "Local AI Revolution: Modded GPUs...",
+   "youtube_id": "8NBQDgy1rnI",
+   "youtube_title": "DTV - Zach-Adams Effect - Ep. 164 – Oct 09, 2026 - Local AI Revolution: Modded GPUs...",
+   "upload_date": "2026-10-09",
+   "duration_seconds": 2612,
+   "description": "- Local AI Hardware Modding (0:00)\n- AI Model Optimization Trends (6:12)\n- New Inference Engines and Tools (7:32)\n- Implementing Local AI Agents (11:52)\n- Anthropic and OpenAI Market Analysis (18:15)\n- Economic Implications of AI Growth (26:04)\n- Resistance to AI Innovation (27:39)\n- The Future of Autonomous Intelligence (36:54)"
+  },
+  {
+   "number": 161,
+   "date": "2026-10-04",
+   "title": "Local AI Breakthroughs...",
+   "youtube_id": "SqCBmuGSM9E",
+   "youtube_title": "DTV - Zach-Adams Effect - Ep. 161 – Oct 04, 2026 - Local AI Breakthroughs...",
+   "upload_date": "2026-10-05",
+   "duration_seconds": 2857,
+   "description": "- Anthropic's New Model Releases (0:00)\n- OpenRouter and Local AI Setup (5:47)\n- Local Hardware Performance Gains (12:20)\n- Advanced Inference and Quantization (17:55)\n- AI Capabilities in Physical Worlds (38:40)\n- The Future of AI Industry Trends (39:08)"
+  },
+  {
+   "number": 153,
+   "date": "2026-09-18",
+   "title": "AI doomerism as a coordinated fear campaign",
+   "youtube_id": "YJaaRIIFNEs",
+   "youtube_title": "DTV - Zach-Adams Effect - Ep. 153 – Sep 18, 2026 - AI doomerism as a coordinated fear campaign",
+   "upload_date": "2026-09-18",
+   "duration_seconds": 3373,
+   "description": "- The AI Regulation Debate (0:01)\n- Open Source vs Centralized Models (11:46)\n- Poisoned Data and Agent Behavior (12:26)\n- Safety Standards and Alignment Issues (17:57)\n- Economic Impact and Job Displacement (31:21)\n- New Architectures and Local Computing (33:20)\n- Optimizing Hardware via Linux and AI (42:12)"
+  }
+ ]
+}
