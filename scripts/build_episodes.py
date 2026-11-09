@@ -238,6 +238,19 @@ def list_page(eps: list[dict]) -> str:
                  f"{SITE}/episodes/", f'<h1>Episodes</h1>\n<ul class="list">\n{items}\n</ul>')
 
 
+def sitemap(eps: list[dict]) -> str:
+    """Every page the site publishes, with the episode's air date as lastmod."""
+    rows = [f"  <url><loc>{SITE}/</loc></url>",
+            f"  <url><loc>{SITE}/episodes/</loc></url>"]
+    for ep in eps:
+        rows.append(f"  <url><loc>{SITE}/episodes/{ep['number']}/</loc>"
+                    f"<lastmod>{ep['date']}</lastmod></url>")
+    rows.append(f"  <url><loc>{SITE}/privacy/</loc></url>")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + "\n".join(rows) + "\n</urlset>\n")
+
+
 def render(eps: list[dict]) -> dict[Path, str]:
     out: dict[Path, str] = {ROOT / "episodes/index.html": list_page(eps)}
     for ep in eps:
@@ -248,6 +261,7 @@ def render(eps: list[dict]) -> dict[Path, str]:
     a, rest = idx.split(BEGIN)
     _, b = rest.split(END)
     out[INDEX] = a + carousel(eps) + b
+    out[ROOT / "sitemap.xml"] = sitemap(eps)
     return out
 
 
