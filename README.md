@@ -8,6 +8,7 @@ at <https://zachadamseffect.com>.
 |---|---|
 | `/` | landing page for the channel |
 | `/episodes/` | episode list; `/episodes/<n>/` is each episode's video page (local thumbnail + VideoObject JSON-LD) |
+| `/guests/` | guest appearances on other shows; `/guests/<slug>/` streams the archived MP4 from the DigitalOcean Spaces CDN |
 | `/privacy/` | privacy policy (also the privacy policy URL for the channel's Google OAuth app) |
 
 Static HTML with a Python episode generator, no analytics. The optional hero YouTube player contacts YouTube after page load (or on click with Save-Data). `CNAME` carries the custom domain.
@@ -27,6 +28,25 @@ The newest episode is the "Watch latest episode" card in the channel hero, betwe
 `<!-- HERO-LATEST:BEGIN -->` / `<!-- HERO-LATEST:END -->`; the "Previous episodes" carousel (the
 rest, newest first) lives between `<!-- EPISODES:BEGIN -->` / `<!-- EPISODES:END -->` in `index.html`;
 re-run `build_episodes.py` after `integrate_from_demo1.py` regenerates the page.
+
+## Guest appearances
+
+When Zach appears as a guest on another show, the appearance is archived to the
+`zachadamseffect` Spaces bucket (`guests/<slug>/`, sfo3) and published here.
+`guests/entries/<slug>.json` — one file per appearance, written by the ingest pipeline
+in `~/dev/zachadamseffect-yt`, never by hand — is the source of truth for everything
+under `/guests/` and for the "Guest appearances" strip above the homepage carousel.
+
+```bash
+uv run scripts/build_guests.py            # regenerate after the ingest pipeline adds an entry
+uv run scripts/build_guests.py --check    # exit 1 if /guests/, the homepage block or the sitemap is stale
+```
+
+The generator owns `guests/index.html`, every `guests/<slug>/index.html`, the block
+between `<!-- GUESTS:BEGIN -->` / `<!-- GUESTS:END -->` in `index.html`, and the
+`/guests/` rows of `sitemap.xml`. Video and posters are hot-linked from the Spaces CDN;
+no media is committed. With zero entries the homepage block renders as the two markers
+and nothing else, so the page keeps working before the first appearance is archived.
 
 ## Deploy
 
