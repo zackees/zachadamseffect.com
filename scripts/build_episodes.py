@@ -313,6 +313,15 @@ def list_page(eps: list[dict], page: int = 1, total: int = 1) -> str:
     return shell("Episodes | Zach Adams Effect", "Explore Zach Adams Effect episodes.", SITE + feed_url(page), body)
 
 
+def guest_rows() -> list[str]:
+    """The /guests/ rows owned by scripts/build_guests.py — this generator must not drop them."""
+    path = ROOT / "sitemap.xml"
+    if not path.exists():
+        return []
+    return [line for line in path.read_text().splitlines()
+            if line.strip().startswith("<url>") and f"{SITE}/guests/" in line]
+
+
 def sitemap(eps: list[dict]) -> str:
     """Every page the site publishes, with the episode's air date as lastmod."""
     rows = [f"  <url><loc>{SITE}/</loc></url>",
@@ -322,6 +331,7 @@ def sitemap(eps: list[dict]) -> str:
                     f"<lastmod>{ep['date']}</lastmod></url>")
     for page in range(2, math.ceil(len(eps) / PAGE_SIZE) + 1):
         rows.append(f"  <url><loc>{SITE}{feed_url(page)}</loc></url>")
+    rows.extend(guest_rows())
     rows.append(f"  <url><loc>{SITE}/privacy/</loc></url>")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

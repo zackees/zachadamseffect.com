@@ -1,0 +1,35 @@
+{
+  "slug": "2026-10-30-redacted",
+  "date": "2026-10-30",
+  "show": "Redacted",
+  "host": "Clayton Morris & Natali Morris",
+  "title": "Zach Vorhies WARNS: Something Big Is Happening With Military AI, And No One Is Ready",
+  "description": "Anthropic prepares for a landmark public offering while locked in a legal and political battle with the Pentagon. The clash erupted after Anthropic barred its artificial intelligence technology from domestic surveillance and autonomous weaponry. In retaliation, the federal government banned federal agency use and labeled the AI developer a national security supply chain risk.",
+  "topics": [
+    "military ai",
+    "anthropic",
+    "google / youtube",
+    "surveillance"
+  ],
+  "sources": [
+    {
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=zO31ezSf1DA",
+      "id": "zO31ezSf1DA"
+    }
+  ],
+  "duration_seconds": 1435,
+  "archive": {
+    "bucket": "zachadamseffect",
+    "region": "sfo3",
+    "video_key": "guests/2026-10-30-redacted/video.mp4",
+    "poster_key": "guests/2026-10-30-redacted/poster.jpg",
+    "video_url": "https://zachadamseffect.sfo3.cdn.digitaloceanspaces.com/guests/2026-10-30-redacted/video.mp4",
+    "poster_url": "https://zachadamseffect.sfo3.cdn.digitaloceanspaces.com/guests/2026-10-30-redacted/poster.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 667474651,
+    "md5": "673706c8d0d3929d80b82ee0bb109d4a",
+    "archived_at": "2026-11-13T00:19:39Z"
+  }
+}
