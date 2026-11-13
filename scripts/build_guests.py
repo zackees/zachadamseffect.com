@@ -143,7 +143,7 @@ h1{font-family:Fraunces,Georgia,serif;font-size:clamp(1.6rem,4vw,2.4rem);line-he
 .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
 .list{list-style:none;padding:0;display:grid;gap:14px}
 .list a{display:flex;gap:14px;align-items:center;text-decoration:none;color:#e6e6d9}
-.list img{width:160px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#000}
+.list img{width:160px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#000}
 .list small{display:block;color:#b9b9ad}
 @media (max-width:520px){.list a{flex-direction:column;align-items:flex-start}.list img{width:100%}}
 .empty{color:#b9b9ad}
